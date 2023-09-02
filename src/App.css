@@ -1,0 +1,159 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+li {
+  list-style: none;
+}
+
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a2fd1;
+  padding: 0 2rem;
+}
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.logo li a {
+  font-size: larger;
+}
+
+.logo span {
+  color: gold;
+  font-weight: 700;
+  padding-left: 0.1rem;
+}
+.nav-list {
+  display: flex;
+  margin: auto;
+}
+.nav-list li {
+  padding: 0 1rem;
+}
+.nav-list li a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+  .nav-list li a:active{
+    color: gold !important;
+    font-weight: 700;
+  }
+
+.social-links {
+  display: flex;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+.social-links li {
+  cursor: pointer;
+  margin: auto;
+  font-weight: 600;
+  padding-left: 1rem;
+}
+.social-links li .github-icon,
+.social-links li .linkedin-icon {
+
+  box-shadow: none;
+  outline: none;
+  transform: scale(1);
+  filter: drop-shadow(-1px 2px rgba(0, 0, 0, 0.2));
+  padding: 0 0.4rem;
+  font-size: 2rem;
+}
+
+.hamburger {
+  display: none;
+}
+.nav-list .active {
+color: gold !important;
+font-weight: 700 !important;
+}
+.main-nav ul li a.active {
+  color: blue; /* Customize the color for the active menu item */
+  font-weight: bold;
+}
+
+ @media screen and (max-width:768px) {
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50%;
+    position: absolute;
+    top: 10%;
+    left: -4%;
+    opacity: 0.8;
+    
+  }
+
+  .logo{
+    font-weight: 800;
+  }
+
+  .nav-list li{
+    width: 100%;
+    text-align:center;
+    padding: 1rem;
+    transition: all ease-in-out 0.6s;
+    border-bottom: solid thin white;
+    color:#fff;
+   
+  }
+  .nav-list li a{
+    font-size: large;
+   
+  }
+  .nav-list li a:active{
+    color: gold;
+    font-weight: 700;
+    /* transform: translateY(15px); */
+  }
+  .social-links{
+    display:flex;
+    justify-content: flex-start;
+    position: relative;
+    left: -5%;
+    color:#fff ;
+  }
+  .social-links li {
+    font-weight: 700;
+  }
+  .social-links li .github-icon{
+    box-shadow: none;
+    outline:none;
+    transform: scale(1);
+    filter: drop-shadow(-1px 2px rgba(0, 0, 
+    0,.2));
+    padding: 0 .4rem;
+    font-size: 2rem;
+  }
+  .social-links li .linkedin-icon{
+    box-shadow: none;
+    outline:none;
+    transform: scale(1);
+    filter: drop-shadow(-1px 2px rgba(0, 0, 
+    0,.2));
+    padding: 0 .4rem;
+    font-size: 2rem;
+  }
+  
+  .hamburger{
+    display: initial;
+    cursor: pointer;
+     
+      }
+}

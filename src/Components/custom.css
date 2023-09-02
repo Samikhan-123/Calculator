@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap");
+body {
+  background: #000 !important;
+  color: #fff !important;
+}
+* {
+  font-family: "outfit", sans-serif !important;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+.text {
+  width: 100%;
+  box-shadow: 5px 5px 5px 3px #fff;
+  transition: all 0.5s;
+}
+.text:hover {
+  box-shadow: 15px 15px 5px 3px;
+}
+
+.heading1 {
+  color: navy !important;
+  background-color: darkgray !important;
+  display: block;
+  padding: 2rem 0%;
+  margin-bottom: 2rem;
+  text-align: center !important;
+  font-size: 3rem;
+  font-weight: 700;
+  border: none !important;
+  text-shadow: 3px 3px 5px #fff !important;
+}
+
+form {
+  position: relative;
+  top: 0%;
+  left: 5%;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem 8rem;
+  background-color: darkgrey !important;
+  margin-left: -3rem;
+}
+.my-form {
+  width: 100%;
+
+}
+
+@media screen and (max-width: 768px) {
+  .text {
+    width: 97vw;
+    position: relative;
+    left: -15%;
+    margin: 0%;
+  }
+  .heading1 {
+    padding: 1rem;
+    text-shadow: 2px 2px 3px #fff;
+  }
+  form {
+    position: absolute;
+    left: -10%;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 1rem;
+    margin-left: 4.2rem;
+  }
+  .my-form {
+    width: 100%;
+    position: relative;
+    left: 0.5rem;
+    bottom: 0rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .text {
+    width: 100%;
+    position: relative;
+    left: -1%;
+    margin: 0%;
+  }
+  .heading1 {
+    padding: 1rem;
+    text-shadow: 2px 2px 3px #fff;
+  }
+  form {
+    position: absolute;
+    left: -18.8%;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 1rem;
+    /* margin-left: 4.2rem; */
+    padding: 1rem;
+  }
+  .my-form {
+    width: 100%;
+    position: relative;
+    left: 0.5rem;
+    bottom: 0rem;
+  }
+}
