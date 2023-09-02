@@ -9,7 +9,7 @@ const Create = () => {
     email: '',
   }
   const navigate = useNavigate()
-  const { handleSubmit, handleChange, values } = useFormik({
+  const { handleSubmit, handleChange} = useFormik({
     initialValues: initialValues,
     onSubmit: (values) => {
       axios

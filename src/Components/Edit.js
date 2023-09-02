@@ -18,6 +18,7 @@ const Edit = () => {
           age: values.age,
           email: values.email,
         })
+        console.log(values)
         .then((response) => {
           console.log(response.data)
           navigate('/')
@@ -32,9 +33,8 @@ const Edit = () => {
     const name = localStorage.getItem('name')
     const age = localStorage.getItem('age')
     const email = localStorage.getItem('email')
-
     formik.setValues({ id, name, age, email })
-  }, [])
+  })
 
   return (
     <>
