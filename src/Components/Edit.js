@@ -34,7 +34,7 @@ const Edit = () => {
     const age = localStorage.getItem('age')
     const email = localStorage.getItem('email')
     formik.setValues({ id, name, age, email })
-  })
+  },[])
 
   return (
     <>
