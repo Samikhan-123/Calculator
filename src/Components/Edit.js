@@ -6,7 +6,7 @@ const Edit = () => {
   const navigate = useNavigate()
   const formik = useFormik({
     initialValues: {
-      id: '0',
+      id: '',
       name: '',
       age: '',
       email: '',
@@ -18,7 +18,6 @@ const Edit = () => {
           age: values.age,
           email: values.email,
         })
-        console.log(values)
         .then((response) => {
           console.log(response.data)
           navigate('/')
@@ -26,29 +25,35 @@ const Edit = () => {
         .catch((error) => {
           console.log(error)
         })
+      console.log(values)
     },
+
   })
   useEffect(() => {
     const id = localStorage.getItem('id')
     const name = localStorage.getItem('name')
     const age = localStorage.getItem('age')
     const email = localStorage.getItem('email')
+
     formik.setValues({ id, name, age, email })
-  },[])
+  }, []);
+
+
 
   return (
     <>
       <div className="row">
-        <div className="col md-4">
+        <div className="col-md-10 m-auto">
           <div className="m-2">
             <Link to="/">
-              <button type="button" className="btn btn-secondary m-2">
+              <button type="button" className="btn btn-secondary mt-2 ">
                 Read Data
               </button>
             </Link>
-            <div className="bg-secondary p-4 text-center">
-              <h1 className="fw-bold" style={{color:'white'}}>Update Data</h1>
+            <div className=" p-1 text-center">
+              <h1 className="fw-bold p-3 m-0" style={{ color: 'white' }}>Update Data</h1>
             </div>
+            <hr />
           </div>
           <form onSubmit={formik.handleSubmit}>
             <div className="form-group">
@@ -87,22 +92,20 @@ const Edit = () => {
                 placeholder="Enter Email"
                 onChange={formik.handleChange}
                 value={formik.values.email}
-               />
+              />
             </div>
             <br />
-            <div  className="d-flex">
+            <div className="d-flex">
               <input
                 type="submit"
                 value="Update"
-                className="btn btn-secondary"
+                className="btn btn-info"
               />
-              <Link to = '/' className='mx-2'>
-              <input
-                  type="submit"
-                  value="Back"
-                  className="btn btn-dark"
-                />   
-                </Link>
+              <Link to="/" className="mx-2">
+                <button type="button" className="btn btn-dark">
+                  Back
+                </button>
+              </Link>
             </div>
           </form>
         </div>

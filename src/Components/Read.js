@@ -38,9 +38,9 @@ const Read = () => {
   }
   return (
     <>
-      <div className="row">
-        <div className="col-md-12">
-          <div className="m-2">
+      <div className="row main-crud ">
+        <div className="col-lg-12 col-md-10 ">
+          <div className="mt-3 mb-3 ">
             <div className="form-check form-switch m-2">
               <input
                 className="form-check-input"
@@ -52,16 +52,16 @@ const Read = () => {
               <label className="form-check-label">Theme</label>
             </div>
             <Link to="/create" className="btn btn-secondary">
-             Create New Data
+              Create New Data
             </Link>
           </div>
-          <table
+          <table 
             className={`table ${isDark ? 'table-dark' : 'table-light'
               } table-striped table-bordered table-hover`}
           >
             <thead>
               <tr>
-                <th>id</th>
+                <th>Index</th>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Email</th>
@@ -72,9 +72,9 @@ const Read = () => {
             <tbody>
               {data.map((item, ind) => {
                 return (
-                  <React.Fragment key={item.id}>
+                  <React.Fragment key={ind}>
                     <tr>
-                      <td>{item.id}</td>
+                      <td>{ind}</td>
                       <td>{item.name}</td>
                       <td>{item.age}</td>
                       <td>{item.email}</td>
