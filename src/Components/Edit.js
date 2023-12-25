@@ -35,7 +35,7 @@ const Edit = () => {
           email: values.email,
         });
 
-        toast.success('Item updated successfully');
+        toast.success('Item successfully updated');
         navigate('/');
       } catch (error) {
         console.error('Update failed:', error);
@@ -54,7 +54,7 @@ const Edit = () => {
     const email = localStorage.getItem('email');
 
     formik.setValues({ id, name, age, email });
-  }, []);
+  }, [formik.setValues]);
 
   return (
     <>
@@ -90,6 +90,7 @@ const Edit = () => {
                 <div className="text-danger">{formik.errors.name}</div>
               )}
             </div>
+            <br />
             <div className="form-group">
               <label htmlFor="age">Age :</label>
               <input
@@ -105,6 +106,7 @@ const Edit = () => {
                 <div className="text-danger">{formik.errors.age}</div>
               )}
             </div>
+            <br />
             <div className="form-group">
               <label htmlFor="email">Email :</label>
               <input

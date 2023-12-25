@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap");
-body {
-  background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 5%,
-    rgba(148, 187, 233, 1) 100%
-  );
-  color: #fff !important;
-}
+
 * {
   font-family: "outfit", sans-serif !important;
   margin: 0%;
@@ -22,7 +14,7 @@ body {
 
 .heading1 {
   color: red !important;
-  background-color: darkgray !important;
+  background-color: transparent !important;
   text-align: center !important;
   font-size: 3rem;
   font-weight: 700;
@@ -60,12 +52,39 @@ body {
   outline: 1px solid blue;
   border-radius: 4px 4px 2px 2px;
 }
+label{
+  color: #fff;
+}
 
 /* Default styles for the table */
 .table-responsive {
   width: 100%;
-  max-width: 800px;
   margin: 0 auto;
+}
+
+body {
+    background: linear-gradient(270deg, #664224, #276624, #242e66);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 /* Additional styles for small screens (less than 600px) */

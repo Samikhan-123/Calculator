@@ -95,7 +95,7 @@ const Read = () => {
               ) : (
                 <table
                   className={`read-table table ${isDark ? 'table-dark' : 'table-light'
-                    } table-striped table-bordered table-hover`}
+                    } table-striped table-bordered table-hover `}
                 >
                   <thead>
                     <tr>
