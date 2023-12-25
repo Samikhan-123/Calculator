@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='container'>
       <div className="text">
-        <h1 className='heading1'>CRUD App</h1>
+        <h1 className='heading1'>CRUD APP</h1>
       </div>
       <Routes>
         <Route path="/" element={<Read />}></Route>
