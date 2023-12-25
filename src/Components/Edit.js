@@ -47,14 +47,17 @@ const Edit = () => {
 
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
+    const { setValues } = formik;
     const id = localStorage.getItem('id');
     const name = localStorage.getItem('name');
     const age = parseInt(localStorage.getItem('age'), 10);
     const email = localStorage.getItem('email');
 
-    formik.setValues({ id, name, age, email });
-  }, [formik.setValues]);
+    setValues({ id, name, age, email });
+  }, []);
+
 
   return (
     <>
